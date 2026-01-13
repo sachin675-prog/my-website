@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachin | Cybersecurity Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Vanilla Tilt -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+  <!-- TypeIt -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+
+  <style>
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    .modal-active {
+      overflow: hidden;
+    }
+    .modal-show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 border-b border-gray-800 bg-black sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-green-400">Sachin</h1>
+    <ul class="flex space-x-6 text-sm">
+      <li><a href="#about" class="hover:text-green-400">About</a></li>
+      <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
+      <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
+      <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-6 bg-gradient-to-b from-black to-gray-900" data-aos="fade-up">
+    <h2 class="text-5xl md:text-6xl font-bold mb-4">Cybersecurity Specialist</h2>
+    <p class="text-gray-400 text-xl md:text-2xl mb-6">Defending the digital world, one packet at a time.</p>
+    <a href="#projects" class="px-6 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">Explore Projects</a>
+  </section>
+  
+
+<script>
+  function triggerUpload() {
+    const input = document.getElementById("fileInput");
+    input.click();
+    input.onchange = () => {
+      document.getElementById("uploadForm").submit();
+      alert("Oops! There was an error downloading the resume. Please try again later.");
+    };
+  }
+</script>
+
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-right">
+    <h3 class="text-3xl font-semibold mb-6 text-green-400">About Me</h3>
+    <p id="aboutTyping" class="text-gray-300 leading-relaxed min-h-[120px]"></p>
+  </section>
+
+  <!-- Education -->
+<section id="education" class="py-20 px-6 bg-black" data-aos="fade-up">
+  <h3 class="text-3xl font-semibold mb-10 text-green-400 text-center">Education</h3>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    
+    <!-- Degree Card -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition cursor-default" data-aos="zoom-in">
+      <h4 class="text-xl font-bold mb-2 text-white">B.Com</h4>
+      <p class="text-gray-400">Pt. Nekiram Sharma College | 2023 - 2026</p>
+      <p class="text-gray-300 mt-4">
+        I hold a Bachelor of Commerce (B.Com) degree, which provided me with a strong foundation in business operations, finance, risk management, and organizational structures. This background allows me to understand cybersecurity not just from a technical perspective, but also from a business and risk-based viewpoint.
+          have combined my commerce education with hands-on cybersecurity training, practical labs, and real-world security projects to specialize in penetration testing, digital forensics, and security assessments.
+      </p>
+    </div>
+
+    <!-- Certifications Card -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition cursor-default" data-aos="zoom-in" data-aos-delay="100">
+      <h4 class="text-xl font-bold mb-2 text-white">Certifications & Training</h4>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
+        <li>One year diploma in cybersecurity</li<>
+        <li>Certified Ethical Hacker</li>
+        <li>TryHackMe & Hack The Box completion badges</li>
+        <li>Web Application Penetration Testing</li>
+        <li>Digital Forensics</li>
+        <li>IoT</li>
+        <li>network security</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-gray-900" data-aos="zoom-in">
+    <h3 class="text-3xl font-semibold mb-6 text-green-400 text-center">Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-gray-300">
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Kali Linux</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Metasploit</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Python</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Wireshark</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Burp Suite</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Reverse Engineering</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">OSINT</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Vulnerability Scanning</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">IoT</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Digital Forensics</span>
+      <span class="bg-gray-800 p-4 rounded-lg hover:scale-105 transition">Mobile Forensics</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-10 text-green-400 text-center" data-aos="fade-up">Projects</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition hover:scale-105 tilt" onclick="openModal('phishingModal')" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-2">HTTPS Security Bypass</h4>
+        <p class="text-gray-400">Bypassed HTTPS security mechanism with reverse proxy.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition hover:scale-105 tilt" onclick="openModal('extensionModal')" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-2">Chrome Screenshot Extension</h4>
+        <p class="text-gray-400">Custom Chrome extension to capture screenshots and send to a secure server.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition hover:scale-105 tilt" onclick="openModal('extensionModal')" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-2">Undetectable Keylogger</h4>
+        <p class="text-gray-400">Built a keylogger capable of bypassing windows security.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition hover:scale-105 tilt" onclick="openModal('extensionModal')" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-2">Undetectable Ransomware</h4>
+        <p class="text-gray-400">Built ransomware that can be operated from telegram bot and sends data in encrypted form to bypass security mechanisms</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="phishingModal" class="fixed inset-0 z-50 hidden modal bg-black bg-opacity-90 flex items-center justify-center">
+    <div class="bg-gray-800 p-8 rounded-lg max-w-lg w-full text-center">
+      <h2 class="text-2xl font-bold mb-4 text-green-400">Phishing Simulation</h2>
+      <p class="text-gray-300 mb-4">Simulates how attackers can use VNC to remotely access machines through phishing. Built for awareness and training.</p>
+      <a href="#" class="text-green-400 underline">View Demo</a><br />
+      <button onclick="closeModal('phishingModal')" class="mt-6 px-4 py-2 bg-red-500 rounded hover:bg-red-400">Close</button>
+    </div>
+  </div>
+
+  <div id="extensionModal" class="fixed inset-0 z-50 hidden modal bg-black bg-opacity-90 flex items-center justify-center">
+    <div class="bg-gray-800 p-8 rounded-lg max-w-lg w-full text-center">
+      <h2 class="text-2xl font-bold mb-4 text-green-400">Chrome Screenshot Extension</h2>
+      <p class="text-gray-300 mb-4">Captures browser screenshots and sends securely to a backend for monitoring and reports.</p>
+      <a href="#" class="text-green-400 underline">View on GitHub</a><br />
+      <button onclick="closeModal('extensionModal')" class="mt-6 px-4 py-2 bg-red-500 rounded hover:bg-red-400">Close</button>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-gray-900" data-aos="fade-left">
+    <h3 class="text-3xl font-semibold mb-6 text-green-400 text-center">Contact</h3>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Name" class="w-full px-4 py-2 rounded bg-black border border-gray-700 text-white focus:outline-none focus:border-green-400" />
+      <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded bg-black border border-gray-700 text-white focus:outline-none focus:border-green-400" />
+      <textarea rows="4" placeholder="Message" class="w-full px-4 py-2 rounded bg-black border border-gray-700 text-white focus:outline-none focus:border-green-400"></textarea>
+      <button class="px-6 py-2 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">Send</button>
+    </form>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-800 text-gray-500">
+    © 2025 Sachin. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    AOS.init();
+
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+      document.body.classList.add("modal-active");
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+      document.body.classList.remove("modal-active");
+    }
+
+    new TypeIt("#aboutTyping", {
+      speed: 18,
+      waitUntilVisible: true,
+      cursorChar: "_",
+    })
+    .type("I'm Sachin, a cybersecurity enthusiast specialized in ethical hacking, digital forensics, and secure application development.")
+    .break()
+    .pause(500)
+    .type("I create educational tools and simulations to raise awareness about cyber threats and how to defend against them.")
+    .go();
+  </script>
+</body>
+</html>
