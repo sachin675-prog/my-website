@@ -2,243 +2,381 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sachin | Cybersecurity Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Kaliraman | Cybersecurity Analyst Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
 
   <style>
-    .modal { transition: opacity 0.25s ease; }
-    .modal-active { overflow: hidden; }
-    .modal-show { opacity: 1; pointer-events: auto; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050816;
+      color: #e5e7eb;
+    }
+
+    .glass {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(75, 85, 99, 0.3);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      border-color: #22c55e;
+      transform: translateY(-4px);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
-<body class="bg-black text-white font-sans">
+<body>
 
-<!-- Navbar -->
-<nav class="flex justify-between items-center px-6 py-4 border-b border-gray-800 bg-black sticky top-0 z-50">
-  <h1 class="text-2xl font-bold text-green-400">Sachin</h1>
-  <ul class="flex space-x-6 text-sm">
-    <li><a href="#about" class="hover:text-green-400">About</a></li>
-    <li><a href="#about" class="hover:text-green-400">Experience</a></li>
-    <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
-    <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
-    <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-    <li><a href="Sachin Kaliraman Resume.pdf" download
-   class="ml-4 px-4 py-2 bg-green-500 text-black font-semibold rounded-lg hover:bg-green-400 transition flex items-center gap-2">
-   <i class="fas fa-download"></i>
-   Resume
-</a></li>
-  </ul>
+<!-- NAVBAR -->
+<nav class="fixed w-full top-0 z-50 bg-[#050816]/90 backdrop-blur-lg border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold gradient-text">Sachin Kaliraman</h1>
+
+    <ul class="hidden md:flex items-center space-x-8 text-sm text-gray-300">
+      <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+      <li><a href="#experience" class="hover:text-green-400 transition">Experience</a></li>
+      <li><a href="#skills" class="hover:text-green-400 transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
+      <li><a href="#education" class="hover:text-green-400 transition">Education</a></li>
+      <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- Hero -->
-<section class="text-center py-20 px-6 bg-gradient-to-b from-black to-gray-900" data-aos="fade-up">
-  <h2 class="text-5xl md:text-6xl font-bold mb-4">Cybersecurity Analyst | Network Security</h2>
-  <p class="text-gray-400 text-xl md:text-2xl mb-6">Focused on network traffic analysis, threat detection, and incident investigation.</p>
-</section>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
 
-<!-- About -->
-<section id="about" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-right">
-  <h3 class="text-3xl font-semibold mb-6 text-green-400">About Me</h3>
-  <p id="aboutTyping" class="text-gray-300 leading-relaxed min-h-[120px]"></p>
-</section>
-<!-- Experience -->
-<section id="experience" class="py-20 px-6 bg-gray-900" data-aos="fade-up">
-  <h3 class="text-3xl font-semibold mb-10 text-green-400 text-center">Experience</h3>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0f172a,transparent_40%),radial-gradient(circle_at_bottom_left,#052e16,transparent_35%)]"></div>
 
-  <div class="max-w-6xl mx-auto space-y-8">
+  <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up">
 
-    <!-- Internship -->
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition">
-      <h4 class="text-xl font-bold text-white">Cybersecurity Analyst Intern</h4>
-      <p class="text-gray-400">M Cyber Academy | Jun 2025 - Dec 2025 </p>
+    <p class="uppercase tracking-[0.3em] text-sm text-green-400 mb-6">
+      Cybersecurity Portfolio
+    </p>
 
-      <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2">
-        <li>Delivered structured training across multiple batches on networking and security fundamentals</li>
-        <li>Conducted 20+ sessions focused on network traffic behaviour and analysis</li>
-        <li>Guided learners in packet analysis using Wireshark (DNS, TCP handshake, HTTPS)</li>
-        <li>Designed labs on VLANs, routing, and inter-network communication</li>
-        <li>Explained firewalls, IDS/IPS, VPNs, and secure protocols with traffic flow focus</li>
-        <li>Introduced cloud networking concepts including VPC, subnets, and security groups</li>
-        <li>Conducted troubleshooting using ping, traceroute, netstat, and nslookup</li>
-        <li>Worked on scenario-based exercises involving abnormal traffic and misconfigurations</li>
-      </ul>
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      SOC-Focused <span class="gradient-text">Cybersecurity Analyst</span>
+    </h1>
+
+    <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
+      Focused on network traffic analysis, threat investigation, and security monitoring using Wireshark, Splunk, Nmap, and Burp Suite. Experienced in analysing suspicious traffic patterns, simulated attack activity, and indicators of compromise across controlled lab environments.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="Sachin Kaliraman Resume.pdf" download class="px-6 py-3 bg-green-500 hover:bg-green-400 text-black rounded-lg font-semibold transition">
+        Download Resume
+      </a>
+
+      <a href="https://github.com/sachin675-prog" target="_blank" class="px-6 py-3 border border-gray-700 hover:border-green-400 rounded-lg transition">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/sachin-kaliraman-855236333/" target="_blank" class="px-6 py-3 border border-gray-700 hover:border-green-400 rounded-lg transition">
+        LinkedIn
+      </a>
     </div>
-
-    <!-- Freelance -->
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition">
-      <h4 class="text-xl font-bold text-white">Freelance Network & Security Trainer</h4>
-      <p class="text-gray-400">Self Employed | Aug 2025 - Present </p>
-
-      <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2">
-        <li>Monitored and analysed network traffic across 10+ lab environments</li>
-        <li>Performed deep packet inspection on 300–500 packets per session using Wireshark</li>
-        <li>Conducted scanning and enumeration on 150+ systems using Nmap</li>
-        <li>Simulated attacks like MITM, brute-force, ARP spoofing, and DoS in lab setup</li>
-        <li>Created and maintained lab environments for 100+ learners</li>
-        <li>Delivered 20+ sessions on networking, packet analysis, and threat detection</li>
-        <li>Documented findings including attack patterns and remediation steps</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
-<!-- Education -->
-<section id="education" class="py-20 px-6 bg-black" data-aos="fade-up">
-  <h3 class="text-3xl font-semibold mb-10 text-green-400 text-center">Education</h3>
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto" data-aos="fade-up">
 
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition cursor-default">
-      <h4 class="text-xl font-bold mb-2 text-white">Bachelor of Commerce (B.Com)</h4>
-      <p class="text-gray-400">Maharshi Dayanand University | 2023 - Present</p>
-      <p class="text-gray-300 mt-4">
-        Currently pursuing B.Com with a focus on understanding business processes and risk management.
-        Alongside academics, actively engaged in cybersecurity labs involving network traffic analysis,
-        threat detection, and real-world simulation scenarios.
+    <h2 class="section-title">About Me</h2>
+
+    <div class="glass rounded-2xl p-8 md:p-10 leading-relaxed text-gray-300 text-lg">
+      <p class="mb-6">
+        Cybersecurity analyst focused on network traffic analysis, threat investigation, and security monitoring within virtual lab environments. Experienced in analysing DNS, TCP/IP, HTTP/S, and outbound communication behaviour using Wireshark, Splunk, Nmap, and Burp Suite.
+      </p>
+
+      <p class="mb-6">
+        Worked on simulated attack scenarios involving brute-force activity, command-and-control communication, ransomware behaviour, and abnormal outbound traffic analysis. Comfortable with packet inspection, log analysis, traffic investigation, and identifying indicators of compromise.
+      </p>
+
+      <p>
+        Alongside blue-team analysis workflows, also experienced with security testing concepts including reconnaissance, attack simulation, web application testing fundamentals, and endpoint behaviour analysis.
       </p>
     </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg tilt hover:scale-105 transition cursor-default">
-      <h4 class="text-xl font-bold mb-2 text-white">Certifications & Training</h4>
-      <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
-        <li>One Year Diploma in Cyber Security – M Cyber Academy</li>
-        <li>Certified Ethical Hacker (CEH)</li>
-        <li>Python & Black Hat Python</li>
-        <li>Linux Administration</li>
-        <li>WAPT & APT</li>
-        <li>IoT Security</li>
-        <li>Digital Forensics</li>
-        <li>Google Detection & Response</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="py-20 px-6 bg-gray-900">
-  <h3 class="text-3xl font-semibold mb-6 text-green-400 text-center">Skills</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-gray-300">
-    <span class="bg-gray-800 p-4 rounded-lg">Network Traffic Analysis</span>
-<span class="bg-gray-800 p-4 rounded-lg">Security Monitoring</span>
-<span class="bg-gray-800 p-4 rounded-lg">Incident Analysis</span>
-<span class="bg-gray-800 p-4 rounded-lg">Threat Detection</span>
-<span class="bg-gray-800 p-4 rounded-lg">Log Analysis</span>
-<span class="bg-gray-800 p-4 rounded-lg">Packet Inspection</span>
-<span class="bg-gray-800 p-4 rounded-lg">Event Correlation</span>
-<span class="bg-gray-800 p-4 rounded-lg">Indicators of Compromise (IOC)</span>
-<span class="bg-gray-800 p-4 rounded-lg">Wireshark</span>
-<span class="bg-gray-800 p-4 rounded-lg">Nmap</span>
-<span class="bg-gray-800 p-4 rounded-lg">Splunk (SIEM)</span>
-<span class="bg-gray-800 p-4 rounded-lg">Elastic Stack</span>
-<span class="bg-gray-800 p-4 rounded-lg">TCP/IP</span>
-<span class="bg-gray-800 p-4 rounded-lg">DNS Analysis</span>
-<span class="bg-gray-800 p-4 rounded-lg">HTTP/HTTPS Analysis</span>
-<span class="bg-gray-800 p-4 rounded-lg">VLANs & Routing</span>
-<span class="bg-gray-800 p-4 rounded-lg">IDS/IPS</span>
-<span class="bg-gray-800 p-4 rounded-lg">Kali Linux</span>
-<span class="bg-gray-800 p-4 rounded-lg">Burp Suite</span>
-<span class="bg-gray-800 p-4 rounded-lg">Metasploit</span>
-<span class="bg-gray-800 p-4 rounded-lg">Virtualisation (VMware, VirtualBox)</span>
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Experience</h2>
+
+    <div class="space-y-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-white">Cybersecurity Analyst Intern</h3>
+            <p class="text-green-400 mt-1">M Cyber Academy</p>
+          </div>
+
+          <span class="text-gray-400 mt-3 md:mt-0">Aug 2025 – Present</span>
+        </div>
+
+        <ul class="space-y-4 text-gray-300 leading-relaxed">
+          <li>• Analysed 300–500 network packets per session using Wireshark to identify protocol anomalies, latency issues, and suspicious traffic patterns</li>
+          <li>• Conducted scanning and enumeration across 150+ lab systems using Nmap, identifying exposed services and recurring misconfigurations</li>
+          <li>• Investigated DNS, TCP/IP, and HTTP/S communication behaviour during simulated attack and troubleshooting scenarios</li>
+          <li>• Assisted in analysing simulated brute-force attempts, MITM activity, reconnaissance traffic, and abnormal outbound connections</li>
+          <li>• Reduced troubleshooting time for lab exercises by documenting recurring network issues and remediation workflows</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-white">Freelance Network & Security Trainer</h3>
+            <p class="text-green-400 mt-1">Self-Employed</p>
+          </div>
+
+          <span class="text-gray-400 mt-3 md:mt-0">Jun 2025 – Dec 2025</span>
+        </div>
+
+        <ul class="space-y-4 text-gray-300 leading-relaxed">
+          <li>• Delivered 20+ instructor-led sessions covering networking fundamentals, traffic analysis, and security monitoring concepts</li>
+          <li>• Designed hands-on virtual labs involving VLANs, routing, packet inspection, and attack simulation exercises</li>
+          <li>• Guided 10+ learners through Wireshark-based packet analysis involving DNS queries, TCP handshakes, and HTTPS traffic</li>
+          <li>• Improved lab completion consistency by creating structured walkthroughs and troubleshooting documentation</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-  <h3 class="text-3xl font-semibold mb-10 text-green-400 text-center">Projects</h3>
-  <div class="grid md:grid-cols-2 gap-8">
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
 
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">DDoS Traffic Simulation & Analysis</h4>
-      <p class="text-gray-400">Simulated high-volume traffic and analysed patterns to identify service disruption indicators.</p>
+    <h2 class="section-title text-center">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-white mb-6">Security Operations</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Alert Triage</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Threat Detection</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Incident Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">IOC Identification</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Log Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">MITRE ATT&CK</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-white mb-6">Network Analysis</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">TCP/IP</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">DNS Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">HTTP/HTTPS</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Packet Inspection</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Traffic Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">VLANs & Routing</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-white mb-6">Tools & Platforms</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Wireshark</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Splunk</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Nmap</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Burp Suite</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Kali Linux</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Metasploit</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">VMware</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">VirtualBox</span>
+        </div>
+      </div>
+
     </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">C2 Communication Simulation</h4>
-      <p class="text-gray-400">Analysed beaconing patterns and outbound connections to detect suspicious activity.</p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">HTTPS Traffic Analysis</h4>
-      <p class="text-gray-400">Used Burp Suite to inspect encrypted traffic and understand request-response behavior.</p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">Endpoint Activity Monitoring</h4>
-      <p class="text-gray-400">Analysed system logs and behaviour patterns to detect suspicious activity.</p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">Ransomware Behaviour Study</h4>
-      <p class="text-gray-400">Studied file encryption behaviour and detection indicators in lab environment.</p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h4 class="text-xl font-bold mb-2">VoIP Traffic Analysis</h4>
-      <p class="text-gray-400">Captured and analysed RTP traffic to understand call flow and exposure risks.</p>
-    </div>
-
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="py-20 px-6 bg-gray-900">
-  <h3 class="text-3xl font-semibold mb-6 text-green-400 text-center">Contact</h3>
-  <div class="text-center text-gray-300 space-y-2">
-    <p>Email: singhsachin15147@gmail.com</p>
-    <p>Phone: +91 8307876228</p>
-    <p>Location: Jhajjar, Haryana</p>
-    <p class="flex justify-center items-center gap-2">
-  <a href="https://www.linkedin.com/in/sachin-kaliraman-855236333" 
-     target="_blank" 
-     class="flex items-center gap-2 text-green-400 hover:text-green-300 transition">
-    
-    <!-- LinkedIn Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         width="20" height="20" 
-         fill="currentColor" 
-         viewBox="0 0 24 24">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.036-1.851-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.369-1.85 3.599 0 4.264 2.368 4.264 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.815 20.452H3.858V9h2.957v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
-    </svg>
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-7xl mx-auto">
 
-    <span>LinkedIn</span>
-  </a>
-</p>
+    <h2 class="section-title text-center">Projects & Analysis</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">DDoS Traffic Simulation & Analysis</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated high-volume traffic conditions in a controlled lab environment to analyse request spikes, connection saturation, and denial-of-service indicators through packet captures.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Wireshark</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Analysis</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Command & Control Communication Simulation</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated periodic outbound beaconing traffic and analysed packet captures to identify suspicious communication intervals and uncommon outbound destinations.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">C2 Analysis</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Network Monitoring</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">Ransomware Behaviour Study</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated file encryption behaviour within isolated virtual machines to analyse persistence activity, abnormal execution behaviour, and file access anomalies.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Endpoint Analysis</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Virtual Labs</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Malicious Traffic Analysis</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Analysed suspicious outbound browser-extension traffic to identify communication patterns associated with data exfiltration and remote communication behaviour.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Investigation</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">IOC Analysis</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="text-center py-6 border-t border-gray-800 text-gray-500">
-  © 2026 Sachin. All rights reserved.
+<!-- EDUCATION -->
+<section id="education" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Education & Certifications</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">Education</h3>
+
+        <p class="text-green-400 mb-2">
+          Bachelor of Commerce (B.Com)
+        </p>
+
+        <p class="text-gray-400 mb-6">
+          Maharshi Dayanand University | 2023 – Present
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          Focused on cybersecurity training, traffic analysis, and hands-on security lab environments alongside academic coursework.
+        </p>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Certifications</h3>
+
+        <ul class="space-y-3 text-gray-300 leading-relaxed">
+          <li>• Google – Sound the Alarm: Detection and Response</li>
+          <li>• One Year Diploma in Cyber Security – M Cyber Academy</li>
+          <li>• Ethical Hacking Training</li>
+          <li>• Linux Administration</li>
+          <li>• Python & Black Hat Python</li>
+          <li>• WAPT & APT</li>
+          <li>• IoT Security & Digital Forensics</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p class="text-gray-300 text-lg leading-relaxed mb-10">
+      Open to cybersecurity analyst, SOC analyst, security operations, and network security opportunities.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
+        <p class="text-gray-300 break-all">singhsachin15147@gmail.com</p>
+      </div>
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/sachin-kaliraman-855236333/" target="_blank" class="text-green-400 hover:underline">
+          View Profile
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">GitHub</h3>
+        <a href="https://github.com/sachin675-prog" target="_blank" class="text-green-400 hover:underline">
+          View Repositories
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+  © 2026 Sachin Kaliraman. All Rights Reserved.
 </footer>
 
 <script>
-AOS.init();
-
-VanillaTilt.init(document.querySelectorAll(".tilt"), {
-  max: 15,
-  speed: 400,
-});
-
-new TypeIt("#aboutTyping", {
-  speed: 18,
-  waitUntilVisible: true,
-})
-.type("Cybersecurity analyst with hands-on SOC experience in security monitoring, alert triage, and incident investigation..")
-.break()
-.pause(500)
-.type("Experienced in analysing logs, identifying suspicious activity, and supporting incident response processes in real-world environments.")
-.break()
-.pause(500)
-.type("Skilled in SIEM tools, network traffic analysis, and mapping threats using MITRE ATT&CK. Focused on delivering accurate threat detection and contributing effectively to security operations.")
-.go();
+  AOS.init({
+    duration: 700,
+    once: true,
+  });
 </script>
 
 </body>
